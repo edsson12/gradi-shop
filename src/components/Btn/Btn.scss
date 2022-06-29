@@ -1,6 +1,6 @@
 @import "../globals.scss";
 
-.o-btn {
+.o-btn-dark {
     width: 12rem;
     height: 2.8rem;
     border: none;
@@ -13,5 +13,21 @@
   &:hover {
     background-color: $btnSecundaryColor;
     color: $btnMainColor;
+  }
+}
+
+.o-btn-light {
+    width: 12rem;
+    height: 2.8rem;
+    border: none;
+  background-color: $btnSecundaryColor;
+  color: $btnMainColor;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: $fuente;
+  &:hover {
+    background-color: $btnMainColor;
+    color: $btnSecundaryColor;
   }
 }
