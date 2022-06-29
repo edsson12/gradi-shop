@@ -1,0 +1,19 @@
+$fuente: 'Montserrat', sans-serif;
+$btnMainColor: #000002;
+$btnSecundaryColor:#F8F6F7;
+
+$widthTablet: 768px;
+$widthMobile: 425px;
+
+@mixin tablet {
+    @media (max-width:#{$widthTablet}){
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width:#{$widthMobile}){
+        @content;
+    }
+}
+

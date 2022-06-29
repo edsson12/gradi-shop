@@ -1,10 +1,17 @@
-.o-btn{
-    background-color: #4CAF50; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
+@import "../globals.scss";
+
+.o-btn {
+    width: 12rem;
+    height: 2.8rem;
+    border: none;
+  background-color: $btnMainColor;
+  color: $btnSecundaryColor;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  font-size: 1rem;
+  font-family: $fuente;
+  &:hover {
+    background-color: $btnSecundaryColor;
+    color: $btnMainColor;
+  }
 }
