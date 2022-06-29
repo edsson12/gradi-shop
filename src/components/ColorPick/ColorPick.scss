@@ -1,2 +1,61 @@
 @import "../globals.scss";
 
+.o-cp-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 75%;
+  border-bottom: 1px solid $btnMainColor;
+  padding: 2rem 0;
+
+  p {
+    margin: 0.5rem 0;
+    font-family: $fuente;
+    color: $btnMainColor;
+    font-size: 0.8rem;
+  }
+
+  .custom-radio-btn {
+    --size: 1rem;
+    min-width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 1rem 10px;
+    position: relative;
+    padding-left: var(--size);
+  }
+  .custom-radio-btn input {
+    display: none;
+  }
+
+  .custom-radio-btn .checkmark {
+    --gap: 3px;
+    --border: 1px;
+    --check-color: red;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: inline-block;
+    transition: opacity 0.3s ease;
+    border: var(--border) solid #444;
+    padding: var(--gap);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .custom-radio-btn input:checked ~ .checkmark {
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-image: radial-gradient(
+      circle at center,
+      var(--check-color)
+        calc((var(--size) - (var(--border) * 2) - (var(--gap) * 2)) / 2),
+      rgba(255, 255, 255, 0) 0
+    );
+  }
+}
