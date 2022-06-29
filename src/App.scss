@@ -17,5 +17,13 @@
     justify-content: center;
     flex-direction: column;
     width: 50%;
+    .o-btn-cont{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: row;
+      width: 75%;
+      padding: 1rem 0;
+    }
   }
 }
