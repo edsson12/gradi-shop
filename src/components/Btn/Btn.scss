@@ -1,7 +1,7 @@
 @import "../globals.scss";
 
 .o-btn-dark {
-    width: 12rem;
+    width: 50%;
     height: 2.8rem;
     border: none;
   background-color: $btnMainColor;
@@ -13,11 +13,12 @@
   &:hover {
     background-color: $btnSecundaryColor;
     color: $btnMainColor;
+    border: 1px solid $btnMainColor ;
   }
 }
 
 .o-btn-light {
-    width: 12rem;
+    width: 50%;
     height: 2.8rem;
     border: none;
   background-color: $btnSecundaryColor;
@@ -27,7 +28,8 @@
   font-size: 1rem;
   font-family: $fuente;
   &:hover {
-    background-color: $btnMainColor;
-    color: $btnSecundaryColor;
+    background-color: $btnSecundaryColor;
+    color: $btnMainColor;
+    border: 1px solid $btnMainColor ;
   }
 }
