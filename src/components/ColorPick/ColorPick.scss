@@ -6,14 +6,15 @@
   justify-content: flex-start;
   flex-direction: row;
   width: 75%;
-  border-bottom: 1px solid $btnMainColor;
-  padding: 2rem 0;
+  border-bottom: 1px solid #C5C4C3;
+  padding: 1rem 0;
 
   p {
     margin: 0.5rem 0;
     font-family: $fuente;
-    color: $btnMainColor;
-    font-size: 0.8rem;
+    color: #888888;;
+    font-size: 0.8rem; 
+    font-weight: 600;
   }
 
   .custom-radio-btn {

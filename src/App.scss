@@ -1,23 +1,26 @@
-.o-all{
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+.o-all {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   width: 100%;
-  .o-left{
+  .o-left {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50%;
   }
+  
 
-  .o-right{
+  .o-right {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 50%;
-    .o-btn-cont{
+
+    .o-btn-cont {
       display: flex;
       align-items: center;
       justify-content: space-around;

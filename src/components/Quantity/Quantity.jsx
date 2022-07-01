@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
 import './Quantity.scss'
 
-const Quantity = () => {
+const Quantity = ({lista}) => {
+
+    
+
+   
 
     const [suma, setSuma] = useState(0)
 
@@ -24,7 +28,9 @@ const Quantity = () => {
         <p onClick={()=>addQtty()}>+</p>
         </div>
         <div className="o-total-price">
-
+        <p className='light'>Total price:</p>
+        <p className='dark'>$</p>
+        <div></div>
         </div>
 
     </div>

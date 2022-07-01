@@ -8,7 +8,7 @@ const Title = ({resultado}) => {
         <h2>{resultado.title}</h2>
         <div className="o-price-container">
         <h3>${resultado.price}</h3>
-        <p>${resultado.compare_at_price_max}</p>
+        <p>${resultado.compare_at_price_max}</p >
 
         </div>
     </div>

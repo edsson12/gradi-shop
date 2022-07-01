@@ -1,34 +1,39 @@
-import React, { useState } from 'react'
-import './Size.scss'
+import React, { useState, useEffect } from "react";
+import "./Size.scss";
 
+const Size = ({ lista, uniqueSizes, options, setOptions }) => {
 
+  useEffect(() => {
+    console.log(options);
+  }, [options]);
 
-const Size = () => {
+  const [mantener, setMantener] = useState(false);
+  
+  const clean =(size)=>{
+    setOptions([...options, size]);
+   
 
-const [mantener, setMantener] = useState(0)
-
+  }
 
   return (
     <div className="o-size-container">
-        <p>Size:</p>
-        <div className={mantener===1? 'o-number-cont-activo':'o-number-cont'} onClick={()=>setMantener(1)}>
-            <h4>5</h4>
+      <p>Size:</p>
+      <div className="o-boxes-cont">
+      {uniqueSizes.map((size, index) => (
+        <div 
+          key={index}
+          onClick={() => clean(size)}
+          className={
+            mantener === true ? "o-number-cont-activo" : "o-number-cont"
+          }
+         
+        >
+          <h4  key={index}>{size}</h4>
         </div>
-        <div className={mantener===2? 'o-number-cont-activo':'o-number-cont'} onClick={()=>setMantener(2)}>
-            <h4>3</h4>
-        </div>
-        <div className={mantener===3? 'o-number-cont-activo':'o-number-cont'} onClick={()=>setMantener(3)}>
-            <h4>7.5</h4>
-        </div>
-        <div className={mantener===4? 'o-number-cont-activo':'o-number-cont'} onClick={()=>setMantener(4)}>
-            <h4>4</h4>
-        </div>
-        <div className={mantener===5? 'o-number-cont-activo':'o-number-cont'} onClick={()=>setMantener(5)}>
-            <h4>9</h4>
-        </div>
-       
+      ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Size
+export default Size;
