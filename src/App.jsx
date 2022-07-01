@@ -50,9 +50,9 @@ function App() {
       
       
       setImagen(resultado.images);
-      console.log(imagen);
+
     };
-    console.log(options, "OPCIONES");
+   
     //ejecucion de función
     consultarAPI();
   }, []);

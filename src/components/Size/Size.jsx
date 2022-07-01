@@ -4,7 +4,7 @@ import "./Size.scss";
 const Size = ({ lista, uniqueSizes, options, setOptions }) => {
 
   useEffect(() => {
-    console.log(options);
+    
   }, [options]);
 
   const [mantener, setMantener] = useState(false);
