@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Quantity.scss'
 
-const Quantity = ({lista}) => {
+const Quantity = ({resultado}) => {
 
     
 
@@ -29,7 +29,7 @@ const Quantity = ({lista}) => {
         </div>
         <div className="o-total-price">
         <p className='light'>Total price:</p>
-        <p className='dark'>$</p>
+        <p className='dark'>${resultado.price*suma}</p>
         <div></div>
         </div>
 

@@ -9,7 +9,7 @@ import "./App.scss";
 import Description from "./components/Description/Description";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import Drag from "./components/Drag/Drag";
+
 
 function App() {
   //creando los estados para la consulta a la api
@@ -55,7 +55,7 @@ function App() {
    
     //ejecucion de función
     consultarAPI();
-  }, []);
+  }, [resultado.images]);
 
   return (
     <div className="o-all">
@@ -82,7 +82,7 @@ function App() {
         />
         <Size {...{ lista, uniqueSizes, setOptions, options }} />
 
-        <Quantity lista={lista} />
+        <Quantity {...{resultado}} />
 
         <div className="o-btn-cont">
           <Btn texto="Add to favorite" type="light" />

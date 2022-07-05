@@ -3,7 +3,7 @@ import "./Description.scss";
 
 const Description = ({resultado}) => {
 
-    //console.log(resultado.description)
+    
   return (
     <div className="o-descr-cont">
       <p>
