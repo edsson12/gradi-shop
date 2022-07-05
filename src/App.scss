@@ -1,15 +1,23 @@
 @import "react-alice-carousel/lib/scss/alice-carousel.scss";
+@import "./components/globals.scss";
 .o-all {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   width: 100%;
+  @include mobile {
+    flex-direction: column;
+
+  }
   .o-left {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50%;
+    @include mobile {
+      width: 100%;
+    }
   }
   
 
@@ -19,6 +27,10 @@
     justify-content: center;
     flex-direction: column;
     width: 50%;
+    
+    @include mobile {
+      width: 100%;
+    }
 
     .o-btn-cont {
       display: flex;
