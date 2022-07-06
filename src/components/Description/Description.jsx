@@ -1,15 +1,17 @@
 import React from "react";
 import "./Description.scss";
 
-const Description = ({resultado}) => {
+const Description = ({descrip}) => {
 
-  var descrip = resultado.description;
-  var n=28;
+  
+  const descripText= descrip.substring(28).slice(0,-7);
+
+ 
     
   return (
     <div className="o-descr-cont">
       <p>
-       {descrip.substring(n).slice(0,-7)}
+       {descripText}
       </p>
     </div>
   );

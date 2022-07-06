@@ -1,17 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Size.scss";
 
-const Size = ({ lista, uniqueSizes, options, setOptions }) => {
+const Size = ({  uniqueSizes, options, setOptions }) => {
 
-  useEffect(() => {
-    
-  }, [options]);
 
-  const [mantener, setMantener] = useState(false);
   
   const clean =(size)=>{
     setOptions([...options, size]);
-   
+    
 
   }
 
@@ -21,11 +17,10 @@ const Size = ({ lista, uniqueSizes, options, setOptions }) => {
       <div className="o-boxes-cont">
       {uniqueSizes.map((size, index) => (
         <div 
+        className="o-number-cont"
           key={index}
           onClick={() => clean(size)}
-          className={
-            mantener === true ? "o-number-cont-activo" : "o-number-cont"
-          }
+         
          
         >
           <h4  key={index}>{size}</h4>

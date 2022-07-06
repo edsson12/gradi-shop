@@ -19,6 +19,7 @@ function App() {
   const [color, setColor] = useState([]);
   const [sizes, setSizes] = useState([]);
   const [options, setOptions] = useState([]);
+  const [descrip, setDescrip] = useState("");
   
   let uniqueColor = [...new Set(color)];
   let uniqueSizes = [...new Set(sizes)];
@@ -32,7 +33,21 @@ function App() {
       src={"https:" + resultado.featured_image}
       onDragStart={handleDragStart}
       alt="img carousel"
-    />
+    />,
+    <img
+      max-width="80%"
+      width="90%"
+      src={"https://cdn.shopify.com/s/files/1/0454/8316/3809/products/product-2.jpg?v=1639585158"}
+      onDragStart={handleDragStart}
+      alt="img carousel"
+    />,
+    <img
+      max-width="80%"
+      width="90%"
+      src={"https://cdn.shopify.com/s/files/1/0454/8316/3809/products/product-3.jpg?v=1639585158" }
+      onDragStart={handleDragStart}
+      alt="img carousel"
+    />,
     
    
     
@@ -48,10 +63,7 @@ function App() {
       setLista(result.data.variants);
       setColor(result.data.variants.map((el) => el.option1));
       setSizes(result.data.variants.map((el) => el.option2));
-      
-      
-      
-      
+      setDescrip(result.data.description);
 
     };
    
@@ -90,7 +102,7 @@ function App() {
           <Btn texto="Add to favorite" type="light" />
           <Btn texto="Add to cart" type="dark" />
         </div>
-        <Description resultado={resultado} />
+        <Description {...{descrip}} />
 
         
       </div>
