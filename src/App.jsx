@@ -8,12 +8,12 @@ import Quantity from "./components/Quantity/Quantity";
 import "./App.scss";
 import Description from "./components/Description/Description";
 import AliceCarousel from "react-alice-carousel";
-import "react-alice-carousel/lib/alice-carousel.css";
+
 
 
 function App() {
   //creando los estados para la consulta a la api
-  const [imagen, setImagen] = useState([]);
+  //const [imagen, setImagen] = useState([]);
   const [resultado, setResultado] = useState({});
   const [lista, setLista] = useState([]);
   const [color, setColor] = useState([]);
@@ -28,10 +28,12 @@ function App() {
   const items = [
     <img
       max-width="80%"
+      width="90%"
       src={"https:" + resultado.featured_image}
       onDragStart={handleDragStart}
-      role="presentation"
-    />,
+      alt="img carousel"
+    />
+    
    
     
   ];
@@ -49,13 +51,13 @@ function App() {
       
       
       
-      setImagen(resultado.images);
+      
 
     };
    
     //ejecucion de función
     consultarAPI();
-  }, [resultado.images]);
+  }, []);
 
   return (
     <div className="o-all">
